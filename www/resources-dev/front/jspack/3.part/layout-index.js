@@ -2,11 +2,18 @@
 
 (function($) {
 
+	$(document).on("appinitOnce", function() {
+		$("body.layout-index").each(function() {
+			$(".lnb>ul>li:first-child").addClass("active");
+		});
+	});
+
 	$(document).on("appinit", function() {
 		$("body.layout-index").each(function() {
 			$(".scene-content-container img[usemap]").eachReadyScope(function() {
 				$(this).rwdImageMaps();
 			});
+
 			$(".scene-container-wrap").eachReadyScope(function() {
 				var $obj = $(this);
 				var $control = $(".lnb");
