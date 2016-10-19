@@ -1,6 +1,6 @@
 <?php
-$config["themeColor"] = "#977049";
-$config["sitename"] = "한양대학교 역사관";
+$config["themeColor"] = "#ea496b";
+$config["sitename"] = "2016 전국생활문화제";
 $config["mode"] = "front";
 $config["isDev"] = true;
 $config["cssTableMinWidth"] = 640;

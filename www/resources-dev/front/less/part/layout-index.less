@@ -1,4 +1,112 @@
 @partLayoutIndexImageDir: "@{basePartImageDir}layout-index/";
 
 body.layout-index{
+	background-color: #ea496b;
+	
+	#header{
+		.container{
+			width: auto;
+		}
+	}
+	.site-logo{
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: inline-block;
+		margin: 0;
+		
+		&, a{
+			background: url("@{partLayoutIndexImageDir}site-logo.png") no-repeat 50% 50%;
+		}
+		a{
+			display: block;
+			width: 316px + 60px * 2;
+			height: 69px + 60px * 2;
+			padding: 60px;
+		}
+	}
+	.lnb{
+		position: absolute;
+		right: 60px;
+		top: 70px;
+		display: inline-block;
+		
+		>ul{
+			overflow: hidden;
+			
+			>li{
+				float: left;
+				margin-left: 8px;
+				
+				>a{
+					display: block;
+					border: 2px solid #fff;
+					width: 138px;
+					height: 40px;
+					text-align: center;
+					font-size: 18px;
+					letter-spacing: -1px;
+					line-height: 36px;
+					color: #fff;
+					-webkit-transition: background-color ease-in-out .12s, color ease-in-out .12s;
+					-moz-transition: background-color ease-in-out .12s, color ease-in-out .12s;
+					-ms-transition: background-color ease-in-out .12s, color ease-in-out .12s;
+					-o-transition: background-color ease-in-out .12s, color ease-in-out .12s;
+					transition: background-color ease-in-out .12s, color ease-in-out .12s;
+					
+					&:hover, &:focus{
+						background-color: #fff;
+						color: #ea496b;
+					}
+				}
+				&.active{
+					>a{
+						background-color: #fff;
+						color: #ea496b;
+					}
+				}
+			}
+		}
+	}
+	#container{
+		>div{
+			min-height: 940px;
+		}
+	}
+	.visual{
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 160px;
+		background: url("@{partLayoutIndexImageDir}visual-eq-0.png") no-repeat 50% 0;
+		
+		>div{
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		a{
+			position: absolute;
+			left: 782px;
+			top: 505px;
+			display: inline-block;
+			border: 2px solid #ffffff;
+			padding-left: 17px;
+			padding-right: 47px;
+			border-radius: 7px;
+			background: url("@{partLayoutIndexImageDir}visual.png") no-repeat 100% 50%;
+			font-size: 24px;
+			line-height: 56px;
+			color: #fff;
+			
+			&:hover, &:focus{
+				background-image: url("@{partLayoutIndexImageDir}visual-2.png");
+				background-color: #fff;
+				color: #ea496b;
+			}
+		}
+	}
 }
