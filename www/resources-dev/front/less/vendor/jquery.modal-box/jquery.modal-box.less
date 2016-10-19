@@ -1,0 +1,41 @@
+@vendorJqueryModalBoxDir: "@{baseVendorImageDir}jquery.modal-box/";
+
+.modal-box{
+	min-height:100%;
+	
+	>div{
+		height:100%;
+		
+		>span{
+			display: block;
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			cursor:pointer;
+		}
+		>div{
+			vertical-align:middle;
+			width:100%;
+			text-align:center;
+			
+			>div{
+				display:inline-block;
+				position:relative;
+				line-height: 0;
+				
+				>div, >iframe{
+					display:inline-block;
+					width: 100%;
+					text-align:left;
+				}
+				>a[href$="#close"]{
+					position:absolute;
+					z-index:10;
+					display:inline-block;
+				}
+			}
+		}
+	}
+}
