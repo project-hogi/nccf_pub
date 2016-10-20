@@ -37,9 +37,15 @@
 				});
 
 				$window.on("resize.layoutIndex", function() {
+					var windowWidth = $window.width();
 					var windowHeight = $window.height();
 
-					if (windowHeight < 660) {
+					if (windowHeight < 940) {
+						var h = Math.round(windowWidth * 0.58);
+
+						if (windowHeight > h)
+							windowHeight = h;
+
 						$obj.find("img").addClass("low-height").height(windowHeight);
 					} else {
 						$obj.find("img").removeClass("low-height").removeAttr("style");
