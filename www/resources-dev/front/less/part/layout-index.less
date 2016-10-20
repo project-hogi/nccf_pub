@@ -118,7 +118,7 @@ body.layout-index{
 	}
 	#container{
 		>div{
-			min-height: 940px;
+			min-height: 400px;
 		}
 	}
 	.scene-container-wrap{
@@ -156,6 +156,7 @@ body.layout-index{
 		[class^="scene-"]{
 			position: relative;
 			height: 100%;
+			overflow: hidden;
 		}
 	}
 	.scene-bg-container{
@@ -214,7 +215,13 @@ body.layout-index{
 			}
 		}
 		img{
+			width: 100%;
 			max-width: 100%;
+			
+			&.low-height{
+				width: auto;
+				max-height: 100%;
+			}
 		}
 		area{
 			outline: none;

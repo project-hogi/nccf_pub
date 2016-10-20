@@ -29,11 +29,22 @@
 				var lastTriggingMousewheelPosition = null;
 				var sceneSize = $controlAs.size();
 				var sceneHeight = $obj.height();
+				var $window = $(window);
 
-				$(window).on("resized", function() {
+				$window.on("resized", function() {
 					sceneHeight = $obj.height();
 					runAnimation();
 				});
+
+				$window.on("resize.layoutIndex", function() {
+					var windowHeight = $window.height();
+
+					if (windowHeight < 660) {
+						$obj.find("img").addClass("low-height").height(windowHeight);
+					} else {
+						$obj.find("img").removeClass("low-height").removeAttr("style");
+					}
+				}).triggerHandler("resize.layoutIndex");
 
 				$siteLogo.on("click", function(event) {
 					if (!$obj.filter(":visible").size())
