@@ -1,0 +1,58 @@
+@partJqueryModalBoxDir: "@{basePartImageDir}jquery.modal-box/";
+
+.modal-box{
+	>div{
+		/* Background */
+		>span{
+			background: #000;
+			#util>.opacity(.8);
+		}
+		>div{
+			overflow: hidden;
+			
+			>div{
+				>div, >iframe{
+					max-width: 1000px;
+					padding: 10px;
+					background-color: #fff;
+					box-shadow:0 0 10px rgba(0, 0, 0, .4);
+					font-size: 13px;
+					line-height: 1.4em;
+					color: #333;
+					
+					p{
+						&:last-child{
+							margin-bottom: 0;
+						}
+					}
+				}
+				>a[href$="#close"]{
+					right: -68px;
+					top: 0;
+					width: 68px;
+					height: 68px;
+					background: url("@{partJqueryModalBoxDir}close.png") no-repeat 50% 50%;
+					background-color: #dec000;
+				}
+			}
+		}
+	}
+}
+.modal-box-image{
+	>div{
+		>div{
+			>div{
+				>div, >iframe{
+					p{
+						padding: 8px 4px;
+						text-align: center;
+						font-size: 16px;
+						line-height: 1.4em;
+						background-color: #333;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
