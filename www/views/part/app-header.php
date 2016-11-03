@@ -79,6 +79,7 @@ $config["imageDir"] = $config["resourcesDir"]  . "/images";
 <!--[if gte IE 9]><!--><script src="<?php echo $config["resourcesDir"]; ?>/js/vendor/jquery.min.js"></script><![endif]-->
 <script src="<?php echo $config["resourcesDir"]; ?>/js/script.min.js"></script>
 <?php } ?>
+
 </head>
 <body class="<?php echo getBodyClass($pagePath, $bodyClass); ?>">
 <!-- //App Header.html -->
