@@ -10,22 +10,6 @@
 </div>
 <!-- //Footer.html -->
 
-<!-- 레이어팝업시작 -->
-<script language="Javascript" type="text/javascript">
-	<!--
-	function setCookie( name, value, expirehours ) {
-		var todayDate = new Date();
-		todayDate.setHours( todayDate.getHours() + expirehours );
-		document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
-	}
-	function closeWin() {
-		if(document.getElementById("pop_today").checked){
-			setCookie( "ncookie", "done" , 24 );
-		}
-		document.getElementById('layer_pop').style.display = "none";
-	}
-	-->
-</script>
 
 <!--팝업-->
 <div class="layer_popup" style="position:absolute; width:500px;left:50%; margin-left:-480px; top:90px; z-index:1;" id="layer_pop">
@@ -38,17 +22,12 @@
 	</div>
 </div>
 
-<script language="Javascript" type="text/javascript">
-	<!--
+<script type="text/javascript">
 	cookiedata = document.cookie;
-	// alert(cookiedata.indexOf("ncookie=done"));
 	if (cookiedata.indexOf("ncookie=done") < 0){
-		// alert("false");
 		document.getElementById('layer_pop').style.display = "inline";
 	}
 	else {
-		// alert("true");
 		document.getElementById('layer_pop').style.display = "none";
 	}
-	-->
 </script>
